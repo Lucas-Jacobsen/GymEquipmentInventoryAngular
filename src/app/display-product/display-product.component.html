@@ -1,0 +1,18 @@
+<div align="center">
+  <div class="card mb-1" style="max-width: 500px;">
+      <div class="col-md-2">
+
+      </div>
+      <div class="col-md-15">
+        <div class="card-body">
+          <h5 class="card-title">{{equipment!.brand}}{{ equipment!.type}}</h5>
+          <p class="card-text">{{ equipment!.description }}</p>
+          <p class="card-text"><small class="text-muted">${{ equipment!.price }} USD</small></p>
+          <a [routerLink]="['/edit', equipment!.id]" class="btn btn-primary" ><i class="fa fa-edit">Edit Equipment</i></a><br><br>
+          <a [routerLink]="['/delete', equipment!.id]" class="btn btn-primary" ><i class="fa fa-trash">Delete Equipment</i></a>
+
+
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,30 @@
+<div align="center" style="margin-left:50px;margin-right:50px" *ngIf="!wasSubmitted">
+
+  <form (ngSubmit)="onSubmit()" >
+      <div class="form-group">
+        <label for="artist">Brand</label>
+        <input id="artist" type="text" class="form-control" aria-describedby="helpArtist" placeholder="ex: Rogue" required [(ngModel)]="equipment.brand" name="brand">
+      </div>
+      <div class="form-group">
+          <label for="album">Type</label>
+          <input id="album" type="text" class="form-control" aria-describedby="helpAlbum" placeholder="ex: Dumbbell Set" required [(ngModel)]="equipment.type" name="type">
+        </div>
+      <div class="form-group">
+          <label for="description">Description</label>
+          <textarea id="description" rows="3" class="form-control" aria-describedby="helpDescription" placeholder="ex: 5-100lb dumbbell set with knurled grips and a 3.5mm handle" required [(ngModel)]="equipment.description" name="description"></textarea>
+       </div>
+      <div class="form-group">
+          <label for="year">Price</label>
+          <input id="year" type="text" class="form-control" aria-describedby="helpYear" placeholder="ex: 2000" required [(ngModel)]="equipment.price" name="price">
+      </div>
+
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+  </div>
+  <div  *ngIf="wasSubmitted">
+    Album was Edited successfully.
+  </div>
+
+

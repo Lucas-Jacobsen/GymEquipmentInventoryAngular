@@ -1,0 +1,13 @@
+<div align="center" style="margin-left:50px;margin-right:50px" *ngIf="!wasSubmitted">
+
+  <form (ngSubmit)="onSubmit()" >
+
+
+      <button type="submit" class="btn btn-primary">Confirm Delete</button>
+    </form>
+
+  </div>
+  <div  *ngIf="wasSubmitted">
+    Successfully Deleted
+  </div>
+

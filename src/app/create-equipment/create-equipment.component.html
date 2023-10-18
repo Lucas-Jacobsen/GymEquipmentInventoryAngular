@@ -1,0 +1,29 @@
+<div align="center" style="margin-left:50px;margin-right:50px" *ngIf="!wasSubmitted">
+
+  <form (ngSubmit)="onSubmit()" >
+      <div class="form-group">
+        <label for="artist">Brand</label>
+        <input id="artist" type="text" class="form-control" aria-describedby="helpArtist" placeholder="Brand" required [(ngModel)]="equipment.brand" name="brand">
+      </div>
+      <div class="form-group">
+          <label for="album">Type</label>
+          <input id="album" type="text" class="form-control" aria-describedby="helpAlbum" placeholder="Type" required [(ngModel)]="equipment.type" name="type">
+        </div>
+      <div class="form-group">
+          <label for="description">Description</label>
+          <textarea id="description" rows="3" class="form-control" aria-describedby="helpDescription" placeholder="Description" required [(ngModel)]="equipment.description" name="description"></textarea>
+       </div>
+      <div class="form-group">
+          <label for="year">Price</label>
+          <input id="year" type="text" class="form-control" aria-describedby="helpYear" placeholder="Price" required [(ngModel)]="equipment.price" name="price">
+      </div>
+
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+  </div>
+  <div  *ngIf="wasSubmitted">
+    Equipment was added successfully.
+  </div>
+

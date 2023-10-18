@@ -1,0 +1,10 @@
+<div class="list-group" *ngIf="selectedEquipment == null">
+  <button class="list-group-item" active *ngFor="let eqpt of equipment" (click)="onSelectEquipment(eqpt)">
+
+    {{eqpt.brand}} {{eqpt.type}}
+  </button>
+</div>
+
+<div *ngIf="selectedEquipment">
+  <app-display-product [equipment]="selectedEquipment"></app-display-product>
+</div>

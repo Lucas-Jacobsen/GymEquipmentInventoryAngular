@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'gymequipment';
+
+  constructor(private router: Router){}
+
+
+displayEquipment()
+{
+  this.router.navigate(['display'], {queryParams:{data: new DataTransfer}});
+}
+
+
+  title = 'Gym Outlet';
 }
